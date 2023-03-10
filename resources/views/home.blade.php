@@ -1,4 +1,4 @@
-@extends('app')
+@extends('layouts.app')
 @section('content')
 @auth
 <p>Welcome <b>{{ Auth::user()->name }}</b></p>

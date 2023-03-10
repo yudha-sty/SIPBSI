@@ -10,7 +10,7 @@ class UserController extends Controller
 {
 
     public function index(){
-        return view('home');
+        return view('index');
     }
 
     public function register()
@@ -85,6 +85,6 @@ class UserController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/');
+        return redirect('/login');
     }
 }
