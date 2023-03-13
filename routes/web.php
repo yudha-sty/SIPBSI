@@ -3,6 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BarangMasukController;
+use App\Http\Controllers\BarangController;
+use App\Http\Controllers\BarangKeluarController;
+use App\Http\Controllers\OpsController;
+use App\Http\Controllers\KategoriPembiayaanController;
+use App\Http\Controllers\KategoriBarangController;
+use App\Http\Controllers\NasabahController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +31,22 @@ Route::post('password', [UserController::class, 'password_action'])->name('passw
 Route::get('logout', [UserController::class, 'logout'])->name('logout');
 
 //MASTER BARANG
-Route::get('master-barang-masuk', [BarangMasukController::class, 'index'])->name('master-barang-masuk');
+Route::get('master-barang', [BarangController::class, 'index'])->name('master-barang');
+
+//BARANG MASUK
+Route::get('barang-masuk', [BarangMasukController::class, 'index'])->name('barang-masuk');
+
+//BARANG KELUAR
+Route::get('barang-keluar', [BarangKeluarController::class, 'index'])->name('barang-keluar');
+
+//NASABAH
+Route::get('nasabah', [NasabahController::class, 'index'])->name('nasabah');
+
+//OPERASIONAL
+Route::get('ops', [OpsController::class, 'index'])->name('ops');
+
+//KATEGORI BARANG
+Route::get('kategori-barang', [KategoriBarangController::class, 'index'])->name('kategori-barang');
+
+//KATEGORI PEMBIAYAAN
+Route::get('kategori-pembiayaan', [KategoriPembiayaanController::class, 'index'])->name('kategori-pembiayaan');

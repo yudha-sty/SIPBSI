@@ -35,7 +35,26 @@
           </button>
         </div>
         <div class="modal-body">
-          ...
+            <form>
+                <div class="form-group row">
+                  <label for="Nama Barang" class="col-sm-2 col-form-label">Nama Barang</label>
+                  <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                  </div>
+                </div>
+                <div class="form-group row">
+                    <label for="Nama Barang" class="col-sm-2 col-form-label">Nama Pengirim</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="Nama Barang" class="col-sm-2 col-form-label">Stok</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    </div>
+                  </div>
+            </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -52,46 +71,39 @@
                                                 <th>No</th>
                                                 <th>Nama Barang</th>
                                                 <th>Nama Pengirim</th>
-                                                <th>Satuan</th>
-                                                <th>Qty</th>
+                                                <th>Jabatan Pengirim</th>
                                                 <th>Kategori</th>
-                                                <th>Keterangan</th>
-                                                <th>Tanggal</th>
+                                                <th>Stok Masuk</th>
+                                                <th>Stok Total</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($barangmasuk as $bm)
+                                            {{-- @foreach ($barangmasuk as $bm)
                                             <tr>
                                                 <td>{{ $bm->id_barang_masuk }}</td>
                                                 <td>{{ $bm->nama_barang }}</td>
                                                 <td>{{ $bm->nama_pengirim }}</td>
                                                 <td>{{ $bm->satuan }}</td>
                                                 <td>{{ $bm->qty }}</td>
-                                                <td>{{ $bm->kategori }}</td>
-                                                <td>{{ $bm->keterangan }}</td>
-                                                <td>{{ $bm->created_at }}</td>
                                             </tr>
-                                            @endforeach
+                                            @endforeach --}}
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th>No</th>
-                                                <th>Nama Barang</th>
-                                                <th>Nama Pengirim</th>
-                                                <th>Satuan</th>
-                                                <th>Qty</th>
-                                                <th>Kategori</th>
-                                                <th>Keterangan</th>
-                                                <th>Tanggal</th>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Nama Barang</th>
+                                                    <th>Nama Pengirim</th>
+                                                    <th>Jabatan Pengirim</th>
+                                                    <th>Kategori</th>
+                                                    <th>Stok Masuk</th>
+                                                    <th>Stok Total</th>
+                                                </tr>
                                             </tr>
                                         </tfoot>
                                     </table>
                             </div>
                             </div>
-                        </div>
-
-
-                        
+                        </div>      
                     </div>
-
 @endsection

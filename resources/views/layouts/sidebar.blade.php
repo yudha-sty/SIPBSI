@@ -26,16 +26,31 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="/master-barang-masuk">
+                <a class="nav-link" href="/master-barang">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Barang</span></a>
+                    <span>Master Data</span></a>
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/barang-masuk">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Surat</span></a>
+                    <span>Barang Masuk</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/barang-keluar">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Barang Keluar</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/kategori-barang">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Kategori Barang</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/kategori-pembiayaan">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Kategori Pembiayaan</span></a>
             </li>
 
             <!-- Divider -->
@@ -66,16 +81,16 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/nasabah">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
+                    <span>Data Nasabah</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/ops">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
+                    <span>Data Operasional</span></a>
             </li>
 
             <!-- Divider -->
