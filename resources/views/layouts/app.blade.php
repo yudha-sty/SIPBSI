@@ -20,6 +20,10 @@
             rel="stylesheet">
         <!-- Custom styles for this page -->
         <link href="{{ url('assets/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
+
+        <!-- Datatable -->
+        <link href="https://cdn.datatables.net/1.13.3/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css" rel="stylesheet">
     
 </head>
 
@@ -68,7 +72,11 @@
     <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js" type="text/javascript"></script>
     <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js" type="text/javascript"></script>
     <script src="{{ url('assets/js/akm.js') }}"></script>
-
+    <script>
+        $(document).ready(function () {
+    $('#example').DataTable();
+});
+    </script>
 </body>
 
 </html>

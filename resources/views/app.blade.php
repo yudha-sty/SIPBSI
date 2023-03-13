@@ -1,45 +1,40 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@extends('layouts.app')
-@section('content')
-<div class="row">
-    <div class="col-md-6">
-        @if(session('success'))
-        <p class="alert alert-success">{{ session('success') }}</p>
-        @endif
-        @if($errors->any())
-        @foreach($errors->all() as $err)
-        <p class="alert alert-danger">{{ $err }}</p>
-        @endforeach
-        @endif
-        <form action="{{ route('login.action') }}" method="POST">
-            @csrf
-            <div class="mb-3">
-                <label>Username <span class="text-danger">*</span></label>
-                <input class="form-control" type="username" name="username" value="{{ old('username') }}" />
-            </div>
-            <div class="mb-3">
-                <label>Password <span class="text-danger">*</span></label>
-                <input class="form-control" type="password" name="password" />
-            </div>
-            <div class="mb-3">
-                <button class="btn btn-primary">Login</button>
-                <a class="btn btn-danger" href="{{ route('home') }}">Back</a>
-            </div>
-        </form>
-    </div>
-</div>
-@endsection
+<table id="example" class="table table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Tanggal</th>
+            <th>Pengirim</th>
+            <th>Jabatan</th>
+            <th>Perihal</th>
+            <th>Keterangan</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>01/OPS/03/2023</td>
+            <td>10-03-2023</td>
+            <td>Abdul Cholic Harun Rosid</td>
+            <td>Operasional</td>
+            <td>BSI Debit</td>
+            <td>Arsip</td>
+        </tr>
+        <tr>
+            <td>01/TL/03/2023</td>
+            <td>10-03-2023</td>
+            <td>Yudha Setyawan</td>
+            <td>Teller</td>
+            <td>Form Pembiayaan Marketing</td>
+            <td>Arsip</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th>Age</th>
+            <th>Start date</th>
+            <th>Salary</th>
+        </tr>
+    </tfoot>
+</table>
