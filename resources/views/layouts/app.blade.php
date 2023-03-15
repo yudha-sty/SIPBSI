@@ -72,6 +72,7 @@
     <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js" type="text/javascript"></script>
     <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js" type="text/javascript"></script>
     <script src="{{ url('assets/js/akm.js') }}"></script>
+    <script src="https://kit.fontawesome.com/36128c1511.js" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
     $('#example').DataTable();
