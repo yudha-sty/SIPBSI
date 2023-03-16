@@ -54,3 +54,7 @@ Route::post('update-kategori-barang/', [KategoriBarangController::class, 'update
 
 //KATEGORI PEMBIAYAAN
 Route::get('kategori-pembiayaan', [KategoriPembiayaanController::class, 'index'])->name('kategori-pembiayaan');
+Route::post('store-kategori-pembiayaan', [KategoriPembiayaanController::class, 'store'])->name('store-kategori-pembiayaan');
+Route::post('kategori-pembiayaan-destroy/{id}', [KategoriPembiayaanController::class, 'destroy'])->name('kategori-pembiayaan.destroy');
+Route::get('kategori-pembiayaan-edit/{id}', [KategoriPembiayaanController::class, 'edit'])->name('kategori-pembiayaan.edit');
+Route::post('update-kategori-pembiayaan/', [KategoriPembiayaanController::class, 'update'])->name('kategori-pembiayaan.update');

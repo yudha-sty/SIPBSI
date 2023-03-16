@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('nasabah', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->unsignedBigInteger('id_kategori_pembiayaan')->constrained();
             $table->string('nama');
             $table->string('total_pembiayaan');

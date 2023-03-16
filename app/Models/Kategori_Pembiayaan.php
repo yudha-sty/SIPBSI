@@ -10,7 +10,7 @@ class Kategori_Pembiayaan extends Model
     use HasFactory;
 
     protected $table = "kategori_pembiayaan";
-
+    protected $primaryKey = "id";
     protected $fillable = [
         'kategori'
     ];

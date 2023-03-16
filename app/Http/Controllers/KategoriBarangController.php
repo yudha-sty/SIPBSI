@@ -41,7 +41,6 @@ class KategoriBarangController extends Controller
 
     public function destroy($id){
         DB::table('kategori_barang')->where('id', $id)->delete();
-
         return redirect()->route('kategori-barang')->with('success', 'Data Berhasil Dihapus!');
     }
 }
