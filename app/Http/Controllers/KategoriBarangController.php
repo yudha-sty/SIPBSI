@@ -28,10 +28,15 @@ class KategoriBarangController extends Controller
     }
 
     public function edit($id){
-        $kategori = Kategori_Barang::find($id);
-        return view('kategori_barang.update', compact('kategori'));
-    //    DB::table('kategori_barang')->where('id', $id)->get();
-    //     return $data;
+        $kategori = DB::table('kategori_barang')->where('id',$id)->get();
+        return view('kategori_barang/update', ['kategori' => $kategori]);
+    }
+
+    public function update(Request $request){
+        DB::table('kategori_barang')->where('id', $request->id)->update([
+            'kategori' => $request->kategori
+        ]);
+        return redirect()->route('kategori-barang')->with('success', 'Data Berhasil Di update');
     }
 
     public function destroy($id){
