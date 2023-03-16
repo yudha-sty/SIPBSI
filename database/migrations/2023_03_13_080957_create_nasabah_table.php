@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('nasabah', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedBigInteger('id_kategori_pembiayaan')->constrained();
             $table->string('nama');
-            $table->string('total_pembiayaan');
+            $table->integer('total_pembiayaan');
             $table->string('keterangan');
+            $table->string('kategori_pembiayaan');
             $table->timestamps();
         });
     }

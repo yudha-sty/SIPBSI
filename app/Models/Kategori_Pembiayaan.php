@@ -13,5 +13,5 @@ class Kategori_Pembiayaan extends Model
     protected $primaryKey = "id";
     protected $fillable = [
         'kategori'
-    ];
+    ]; 
 }

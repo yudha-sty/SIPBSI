@@ -9,7 +9,9 @@ class BarangMasukController extends Controller
 {
     public function index(Request $request){
         $barangmasuk = BarangMasuk::all();
+        $ops = Ops::all();
+        $kategori = kategori_Barang::all();
 
-        return view('barang/masuk/index', compact('barangmasuk'));
+        return view('barang/masuk/index', compact('barangmasuk','ops','kategori'));
     }
 }

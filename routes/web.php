@@ -41,9 +41,17 @@ Route::get('barang-keluar', [BarangKeluarController::class, 'index'])->name('bar
 
 //NASABAH
 Route::get('nasabah', [NasabahController::class, 'index'])->name('nasabah');
+Route::post('store-nasabah', [NasabahController::class, 'store'])->name('nasabah.store');
+Route::post('nasabah-destroy', [NasabahController::class, 'destroy'])->name('nasabah.destroy');
+Route::get('nasabah-edit/{id}', [NasabahController::class, 'edit'])->name('nasabah.edit');
+Route::post('nasabah-update/', [NasabahController::class, 'update'])->name('nasabah.update');
 
 //OPERASIONAL
 Route::get('ops', [OpsController::class, 'index'])->name('ops');
+Route::post('ops-store', [OpsController::class, 'store'])->name('ops.store');
+Route::post('ops-destroy/{id}', [OpsController::class, 'destroy'])->name('ops.destroy');
+Route::get('ops-edit/{id}', [OpsController::class, 'edit'])->name('ops.edit');
+Route::post('ops-update/', [OpsController::class, 'update'])->name('ops.update');
 
 //KATEGORI BARANG
 Route::get('kategori-barang', [KategoriBarangController::class, 'index'])->name('kategori-barang');

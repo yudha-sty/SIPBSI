@@ -14,11 +14,12 @@ class Nasabah extends Model
     protected $fillable = [
         'id_kategori_pembiayaan',
         'nama',
-        'pembiayaan',
+        'total_pembiayaan',
         'keterangan',
+        'kategori_pembiayaan'
     ];
 
     public function kategori_pembiayaan(){
-        return $this->belongsTo(Kategori_Pembiayaan::class, 'id_kategori_pembiayaan', 'id');
+        return $this->hasMany(Kategori_Pembiayaan::class);
     }
 }
