@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('barang', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedBigInteger('id_kategori_barang')->constrained();
             $table->string('nama_barang');
+            $table->string('kategori');
             $table->integer('stok');
             $table->timestamps();
         });

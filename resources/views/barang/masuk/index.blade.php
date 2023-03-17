@@ -1,3 +1,6 @@
+<?php
+use App\Models\BarangMasuk;
+?>
 @extends('layouts.app')
 @section('content')
                 <div class="container-fluid">
@@ -25,44 +28,58 @@
                                 </div>
 
                                                                             <!-- Modal -->
-<div class="modal fade" id="modalbarangmasuk" tabindex="-1" role="dialog" aria-labelledby="modalbarangmasuk" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Tambah Data</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            <form>
-                <div class="form-group row">
-                  <label for="Nama Barang" class="col-sm-2 col-form-label">Nama Barang</label>
-                  <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                  </div>
-                </div>
-                <div class="form-group row">
-                    <label for="Nama Barang" class="col-sm-2 col-form-label">Nama Pengirim</label>
-                    <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+        <!-- Modal Insert -->
+        <div class="modal fade bd-example-modal-lg" id="modalbarangmasuk" tabindex="-1" role="dialog" aria-labelledby="modalbarangmasuk" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Tambah Data</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="Nama Barang" class="col-sm-2 col-form-label">Stok</label>
-                    <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    <div class="modal-body">
+                    <form action="{{ route('barang-masuk.store') }}" method="POST">
+                        @csrf
+                        <div class="form-group row">
+                            <label for="Nama Barang" class="col-sm-2 col-form-label">Nama Barang</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputEmail3" name="nama_barang" placeholder="Nama Barang">
+                            </div>
+                        </div>
+                            <select name="nama_pengirim" id="nama_pengirim" class="custom-select mb-3">
+                                <option selected>==Pilih Nama Pengirim==</option>
+                                @foreach ($ops as $item)
+                                    <option value="{{ $item->nama }}">{{ $item->nama }}</option>
+                                @endforeach
+                            </select>
+                            <select name="jabatan_pengirim" id="jabatan_pengirim" class="custom-select mb-3">
+                                <option selected>==Pilih Jabatan Pengirim==</option>
+                                @foreach ($ops as $item)
+                                    <option value="{{ $item->jabatan }}">{{ $item->jabatan }}</option>
+                                @endforeach
+                            </select>
+                            <select name="kategori" id="kategori" class="custom-select mb-3">
+                                <option selected>==Pilih kategori==</option>
+                                @foreach ($kategori as $item)
+                                    <option value="{{ $item->kategori }}">{{ $item->kategori }}</option>
+                                @endforeach
+                            </select>
+                                <div class="form-group row">
+                                    <label for="Nama Barang" class="col-sm-2 col-form-label">Stok Masuk</label>
+                                        <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="inputEmail3" name="stok_masuk" placeholder="Stok Masuk">
+                                        </div>
+                                    </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <input type="submit" class="btn btn-success" value="Simpan">
+                                </div>
+                            </form>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-            </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Simpan</button>
-        </div>
-      </div>
-    </div>
-  </div>
+                    </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <table id="example" class="table table-striped" style="width:100%">
@@ -74,19 +91,28 @@
                                                 <th>Jabatan Pengirim</th>
                                                 <th>Kategori</th>
                                                 <th>Stok Masuk</th>
-                                                <th>Stok Total</th>
+                                                <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            {{-- @foreach ($barangmasuk as $bm)
+                                            @foreach ($barangmasuk as $bm)
                                             <tr>
-                                                <td>{{ $bm->id_barang_masuk }}</td>
+                                                <td>{{ $bm->id }}</td>
                                                 <td>{{ $bm->nama_barang }}</td>
                                                 <td>{{ $bm->nama_pengirim }}</td>
-                                                <td>{{ $bm->satuan }}</td>
-                                                <td>{{ $bm->qty }}</td>
+                                                <td>{{ $bm->jabatan_pengirim }}</td>
+                                                <td>{{ $bm->kategori }}</td>
+                                                <td>{{ $bm->stok_masuk }}</td>
+                                                <td>
+                                                    <form action="{{ route('barang-masuk.destroy',$bm->id) }}" method="Post">
+                                                        <a class="btn btn-primary" href="/barang-masuk-edit/{{ $bm->id }}">Edit</a>
+                                                        @csrf
+                                                        @method('POST')
+                                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                                    </form>
+                                                </td>
                                             </tr>
-                                            @endforeach --}}
+                                            @endforeach
                                         </tbody>
                                         <tfoot>
                                             <tr>
@@ -97,7 +123,7 @@
                                                     <th>Jabatan Pengirim</th>
                                                     <th>Kategori</th>
                                                     <th>Stok Masuk</th>
-                                                    <th>Stok Total</th>
+                                                    <th>Action</th>
                                                 </tr>
                                             </tr>
                                         </tfoot>

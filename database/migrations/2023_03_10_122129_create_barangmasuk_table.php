@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('barangmasuk', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedBigInteger('id_barang')->constrained();
-            $table->unsignedBigInteger('id_ops')->constrained();
-            $table->unsignedBigInteger('id_kategori_barang')->constrained();
-            $table->string('stok_masuk');
-            $table->string('stok_total');
+            $table->string('nama_barang');
+            $table->string('nama_pengirim');
+            $table->string('jabatan_pengirim');
+            $table->string('kategori');
+            $table->integer('stok_masuk');
             $table->timestamps();
         });
     }

@@ -27,47 +27,6 @@ use App\Models\Kategori_Barang;
                         </div>
                     </div>
                 </div>
-
-<!-- Modal Edit -->
-{{-- <div class="modal fade bd-example-modal-lg" id="modalbarangmasukedit" tabindex="-1" role="dialog" aria-labelledby="modalbarangmasukedit" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Edit Data</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form action="{{ route('kategori.edit') }}" method="POST">
-                    @method('GET')
-                    @csrf
-                    @foreach($kategori as $k)
-                    @endforeach
-                    <div class="form-group row">
-                        <label for="Kategori" class="col-sm-2 col-form-label">Id</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="id" name="id" placeholder="Id" disabled value="{{ $k->id }}" >
-                        </div>
-                    </div> 
-                    <div class="form-group row">
-                        <label for="Kategori" class="col-sm-2 col-form-label">Kategori</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="kategori" name="kategori" placeholder="Kategori" value="{{ $k->kategori }}">
-                        </div>
-                    </div> 
-                
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <input type="submit" class="btn btn-success" value="Update">
-            </div>
-        </form>
-        </div>
-    </div>
-</div> --}}
-
-
                     <!-- Modal Insert -->
                     <div class="modal fade bd-example-modal-lg" id="modalbarangmasuk" tabindex="-1" role="dialog" aria-labelledby="modalbarangmasuk" aria-hidden="true">
                         <div class="modal-dialog modal-lg" role="document">

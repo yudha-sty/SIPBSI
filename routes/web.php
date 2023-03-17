@@ -32,12 +32,24 @@ Route::get('logout', [UserController::class, 'logout'])->name('logout');
 
 //MASTER BARANG
 Route::get('master-barang', [BarangController::class, 'index'])->name('master-barang');
+Route::post('store-master-barang', [BarangController::class, 'store'])->name('master-barang.store');
+Route::post('master-barang-destroy/{id}', [BarangController::class, 'destroy'])->name('master-barang.destroy');
+Route::get('master-barang-edit/{id}', [BarangController::class, 'edit'])->name('master-barang.edit');
+Route::post('master-barang-update', [BarangController::class, 'update'])->name('master-barang.update');
 
 //BARANG MASUK
 Route::get('barang-masuk', [BarangMasukController::class, 'index'])->name('barang-masuk');
+Route::post('store-barang-masuk', [BarangMasukController::class, 'store'])->name('barang-masuk.store');
+Route::post('barang-masuk-destroy/{id}', [BarangMasukController::class, 'destroy'])->name('barang-masuk.destroy');
+Route::get('barang-masuk-edit/{id}', [BarangMasukController::class, 'edit'])->name('barang-masuk.edit');
+Route::post('barang-masuk-update', [BarangMasukController::class, 'update'])->name('barang-masuk.update');
 
 //BARANG KELUAR
 Route::get('barang-keluar', [BarangKeluarController::class, 'index'])->name('barang-keluar');
+Route::post('store-barang-keluar', [BarangKeluarController::class, 'store'])->name('barang-keluar.store');
+Route::post('barang-keluar-destroy/{id}', [BarangKeluarController::class, 'destroy'])->name('barang-keluar.destroy');
+Route::get('barang-keluar-edit/{id}', [BarangKeluarController::class, 'edit'])->name('barang-keluar.edit');
+Route::post('barang-keluar-update', [BarangKeluarController::class, 'update'])->name('barang-keluar.update');
 
 //NASABAH
 Route::get('nasabah', [NasabahController::class, 'index'])->name('nasabah');

@@ -80,7 +80,7 @@ use App\Models\Kategori_Pembiayaan;
                                             <select name="kategori_pembiayaan" id="kategori_pembiayaan" class="custom-select mb-3">
                                                 <option selected>==Pilih Kategori Pembiayaan==</option>
                                                 @foreach ($kategori as $item)
-                                                    <option value="{{ $item->kategori_pembiayaan }}">{{ $item->kategori }}</option>
+                                                    <option value="{{ $item->kategori }}">{{ $item->kategori }}</option>
                                                 @endforeach
                                             </select>
                                             <div class="valid-feedback">

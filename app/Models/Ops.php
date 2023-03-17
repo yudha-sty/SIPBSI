@@ -14,8 +14,4 @@ class Ops extends Model
         'nama',
         'jabatan',
     ];
-
-    public function barangmasuk(){
-        return $this->hasMany(BarangMasuk::class);
-    }
 }

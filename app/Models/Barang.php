@@ -12,9 +12,9 @@ class Barang extends Model
     protected $table = "barang";
 
     protected $fillable = [
-        'id_kategori_barang',
         'nama_barang',
-        'stok'
+        'kategori',
+        'stok',
     ];
 
     public function kategori()

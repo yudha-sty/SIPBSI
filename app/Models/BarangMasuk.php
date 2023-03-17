@@ -10,13 +10,13 @@ class BarangMasuk extends Model
     use HasFactory;
 
     protected $table = "barangmasuk";
-
+    protected $primaryKey = "id";
     protected $fillable = [
-        'id_barang',
-        'id_ops',
-        'id_kategori_barang',
+        'nama_barang',
+        'nama_pengirim',
+        'jabatan_pengirim',
+        'kategori',
         'stok_masuk',
-        'stok_total',
         'created_at'
     ];
 
@@ -25,10 +25,10 @@ class BarangMasuk extends Model
     }
 
     public function ops(){
-        return $this->belongsTo(Ops::class, 'id_ops', 'id');
+        return $this->hasMany(Ops::class);
     }
 
     public function kategori(){
-        return $this->belongsTo(Kategori_Barang::class, 'id_kategori_barang', 'id');
+        return $this->hasMany(Kategori_Barang::class);
     }
 }
