@@ -53,4 +53,9 @@ class BarangMasukController extends Controller
         ]);
         return redirect()->route('barang-masuk')->with('success', 'Data Berhasil Di update');
     }
+
+    public function destroy($id){
+        DB::table('barangmasuk')->where('id', $id)->delete();
+        return redirect()->route('barang-masuk')->with('success', 'Data Berhasil Dihapus!');
+    }
 }

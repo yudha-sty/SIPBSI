@@ -47,24 +47,39 @@ use App\Models\BarangMasuk;
                                 <input type="text" class="form-control" id="inputEmail3" name="nama_barang" placeholder="Nama Barang">
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <label for="Nama Pengirim" class="col-sm-2 col-form-label">Nama Pengirim</label>
+                            <div class="col-sm-10">
                             <select name="nama_pengirim" id="nama_pengirim" class="custom-select mb-3">
-                                <option selected>==Pilih Nama Pengirim==</option>
+                                <option selected>=Pilih Nama Peengirim=</option>
                                 @foreach ($ops as $item)
                                     <option value="{{ $item->nama }}">{{ $item->nama }}</option>
                                 @endforeach
                             </select>
+                        </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="Jabatan Pengirim" class="col-sm-2 col-form-label">Jabatan Pengirim</label>
+                            <div class="col-sm-10">
                             <select name="jabatan_pengirim" id="jabatan_pengirim" class="custom-select mb-3">
                                 <option selected>==Pilih Jabatan Pengirim==</option>
                                 @foreach ($ops as $item)
                                     <option value="{{ $item->jabatan }}">{{ $item->jabatan }}</option>
                                 @endforeach
                             </select>
+                        </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="Kategori" class="col-sm-2 col-form-label">Kategori</label>
+                            <div class="col-sm-10">
                             <select name="kategori" id="kategori" class="custom-select mb-3">
                                 <option selected>==Pilih kategori==</option>
                                 @foreach ($kategori as $item)
                                     <option value="{{ $item->kategori }}">{{ $item->kategori }}</option>
                                 @endforeach
                             </select>
+                        </div>
+                        </div>
                                 <div class="form-group row">
                                     <label for="Nama Barang" class="col-sm-2 col-form-label">Stok Masuk</label>
                                         <div class="col-sm-10">
