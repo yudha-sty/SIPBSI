@@ -4,13 +4,29 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Barang;
+use App\Models\BarangMasuk;
+use App\Models\BarangKeluar;
+use App\Models\Kategori_Barang;
+use App\Models\Ops;
+use App\Models\Nasabah;
 use Auth;
 
 class UserController extends Controller
 {
 
-    public function index(){
-        return view('index');
+    public function index(Request $request){
+        $barang = Barang::all();
+        $barangmasuk = BarangMasuk::all();
+        $barangkeluar = BarangKeluar::all();
+        $kategori = Kategori_Barang::all();
+        $ops = Ops::all();
+
+        $tbm = BarangMasuk::sum('stok_masuk');
+        $tbk = BarangKeluar::sum('stok_keluar');
+        $tnp = Nasabah::count('nama');
+        $tdo = Ops::count('nama');
+        return view('index', compact('barang','barangmasuk','barangkeluar','kategori','ops','tbm','tbk','tnp','tdo'));
     }
 
     public function register()

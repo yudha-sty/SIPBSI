@@ -1,3 +1,10 @@
+<?php
+use App\Models\Barang;
+use App\Models\BarangMasuk;
+use App\Models\BarangKeluar;
+use App\Models\Kategori_Barang;
+use App\Models\Ops;
+?>
 @extends('layouts.app')
 @section('content')
 <div class="container-fluid">
@@ -30,35 +37,28 @@
                             <tr>
                                 <th>No</th>
                                 <th>Nama Barang</th>
-                                <th>Nama Pengirim</th>
-                                <th>Jabatan</th>
                                 <th>Kategori</th>
-                                <th>Stok Masuk</th>
-                                <th>Stok Keluar</th>
-                                <th>Tanggal Update</th>
+                                <th>Stok</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {{-- @foreach ($barangmasuk as $bm)
+                            @foreach($barangmasuk as $bm)
                             <tr>
-                                <td>{{ $bm->id_barang_masuk }}</td>
+                                <td>{{ $bm->id }}</td>
                                 <td>{{ $bm->nama_barang }}</td>
-                                <td>{{ $bm->nama_pengirim }}</td>
-                                <td>{{ $bm->satuan }}</td>
-                                <td>{{ $bm->qty }}</td>
+                                <td>{{ $bm->kategori}}</td>
+                                <td>{{ BarangMasuk::where('id', $bm->id)->sum('stok_masuk') - BarangKeluar::where('id',$bm->id)->sum('stok_keluar') }}</td>
                             </tr>
-                            @endforeach --}}
+                            @endforeach
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th>No</th>
-                                <th>Nama Barang</th>
-                                <th>Nama Pengirim</th>
-                                <th>Jabatan</th>
-                                <th>Kategori</th>
-                                <th>Stok Masuk</th>
-                                <th>Stok Keluar</th>
-                                <th>Tanggal Update</th>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Nama Barang</th>
+                                    <th>Kategori</th>
+                                    <th>Stok</th>
+                                </tr>
                             </tr>
                         </tfoot>
                     </table>

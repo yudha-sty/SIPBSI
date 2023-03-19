@@ -24,13 +24,6 @@
                 Master Operasional
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link" href="/master-barang">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Master Data</span></a>
-            </li>
-
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link" href="/barang-masuk">
@@ -60,24 +53,6 @@
             <div class="sidebar-heading">
                 Master Data
             </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Status</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Status Barang:</h6>
-                        <a class="collapse-item" href="#">Laporan Barang</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Status Surat:</h6>
-                        <a class="collapse-item" href="#">Laporan Surat</a>
-                    </div>
-                </div>
-            </li>
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
