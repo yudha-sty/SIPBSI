@@ -78,3 +78,6 @@ Route::post('store-kategori-pembiayaan', [KategoriPembiayaanController::class, '
 Route::post('kategori-pembiayaan-destroy/{id}', [KategoriPembiayaanController::class, 'destroy'])->name('kategori-pembiayaan.destroy');
 Route::get('kategori-pembiayaan-edit/{id}', [KategoriPembiayaanController::class, 'edit'])->name('kategori-pembiayaan.edit');
 Route::post('update-kategori-pembiayaan/', [KategoriPembiayaanController::class, 'update'])->name('kategori-pembiayaan.update');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
