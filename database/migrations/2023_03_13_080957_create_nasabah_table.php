@@ -16,8 +16,6 @@ return new class extends Migration
         Schema::create('nasabah', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama');
-            $table->integer('total_pembiayaan');
-            $table->string('keterangan');
             $table->string('kategori_pembiayaan');
             $table->timestamps();
         });
