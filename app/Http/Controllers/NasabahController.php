@@ -18,14 +18,10 @@ class NasabahController extends Controller
     public function store(Request $request){
         $this->validate($request, [
             'nama',
-            'total_pembiayaan',
-            'keterangan',
             'kategori_pembiayaan'
         ]);
         Nasabah::create([
             'nama' => request('nama'),
-            'total_pembiayaan' => request('total_pembiayaan'),
-            'keterangan' => request('keterangan'),
             'kategori_pembiayaan' => request('kategori_pembiayaan')
         ]);
         return redirect()->route('nasabah')->with('success', 'Data Berhasil Ditambah!');
@@ -40,8 +36,6 @@ class NasabahController extends Controller
     public function update(Request $request){
         DB::table('nasabah')->where('id', $request->id)->update([
             'nama' => $request->nama,
-            'total_pembiayaan' => $request->total_pembiayaan,
-            'keterangan' => $request->keterangan,
             'kategori_pembiayaan' => $request->kategori_pembiayaan
         ]);
         return redirect()->route('nasabah')->with('success', 'Data Berhasil Di update');

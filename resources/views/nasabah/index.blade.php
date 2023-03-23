@@ -54,28 +54,6 @@ use App\Models\Kategori_Pembiayaan;
                                         @endif
                                         </div> 
                                         <div class="form-group row">
-                                            <label for="Total Pembiayaan" class="col-sm-2 col-form-label">Total Pembiayaan</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="total_pembiayaan" name="total_pembiayaan" placeholder="Total Pembiayaan">
-                                            </div>
-                                            @if ($errors->has('total_pembiayaan'))
-                                            <div class="text-danger">
-                                                {{ $errors->first('total_pembiayaan') }}
-                                            </div>
-                                        @endif
-                                        </div> 
-                                        <div class="form-group row">
-                                            <label for="Keterangan" class="col-sm-2 col-form-label">Keterangan</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="keterangan" name="keterangan" placeholder="Keterangan">
-                                            </div>
-                                            @if ($errors->has('keterangan'))
-                                            <div class="text-danger">
-                                                {{ $errors->first('keterangan') }}
-                                            </div>
-                                        @endif
-                                        </div> 
-                                        <div class="form-group row">
                                             <label for="validationCustom02" class="col-sm-2 col-form-label">Kategori Pembiayaan</label>
                                             <select name="kategori_pembiayaan" id="kategori_pembiayaan" class="custom-select mb-3">
                                                 <option selected>==Pilih Kategori Pembiayaan==</option>
@@ -109,8 +87,6 @@ use App\Models\Kategori_Pembiayaan;
                             <tr>
                                 <th>No</th>
                                 <th>Nama</th>
-                                <th>Total Pembiayaan</th>
-                                <th>Keterangan</th>
                                 <th>Tanggal</th>
                                 <th>Kategori Pembiayaan</th>
                                 <th>Action</th>
@@ -121,8 +97,6 @@ use App\Models\Kategori_Pembiayaan;
                             <tr>
                                 <td>{{ $n->id }}</td>
                                 <td>{{ $n->nama }}</td>
-                                <td>{{ $n->total_pembiayaan }}</td>
-                                <td>{{ $n->keterangan }}</td>
                                 <td>{{ $n->created_at }}</td>
                                 <td>{{ $n->kategori_pembiayaan }}</td>
                                 <td>
@@ -141,8 +115,6 @@ use App\Models\Kategori_Pembiayaan;
                                 <tr>
                                     <th>No</th>
                                     <th>Nama</th>
-                                    <th>Total Pembiayaan</th>
-                                    <th>Keterangan</th>
                                     <th>Tanggal</th>
                                     <th>Kategori Pembiayaan</th>
                                     <th>Action</th>

@@ -14,8 +14,6 @@ class Nasabah extends Model
     protected $fillable = [
         'id_kategori_pembiayaan',
         'nama',
-        'total_pembiayaan',
-        'keterangan',
         'kategori_pembiayaan'
     ];
 
