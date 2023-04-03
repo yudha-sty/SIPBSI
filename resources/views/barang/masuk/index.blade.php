@@ -20,7 +20,7 @@ use App\Models\BarangMasuk;
                                             aria-labelledby="dropdownMenuLink">
                                             <div class="dropdown-header">Action:</div>
                                             <a class="dropdown-item" data-toggle="modal" data-target="#modalbarangmasuk" href="#">Tambah Data</a>
-                                            <a class="dropdown-item" href="#">Export PDF</a>
+                                            <a class="dropdown-item" href="{{ url('exportlaporan') }}">Export PDF</a>
                                             <div class="dropdown-divider"></div>
                                             <a class="dropdown-item" href="#">Something else here</a>
                                         </div>
@@ -83,7 +83,7 @@ use App\Models\BarangMasuk;
                                 <div class="form-group row">
                                     <label for="Nama Barang" class="col-sm-2 col-form-label">Stok Masuk</label>
                                         <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="inputEmail3" name="stok_masuk" placeholder="Stok Masuk">
+                                        <input type="number" class="form-control" id="inputEmail3" name="stok_masuk" placeholder="Stok Masuk">
                                         </div>
                                     </div>
                                 <div class="modal-footer">

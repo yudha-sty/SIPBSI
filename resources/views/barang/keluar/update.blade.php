@@ -47,7 +47,7 @@
 
             <div class="form-group">
                 <label for="exampleInputPassword1">Stok Keluar</label>
-                <input type="text" class="form-control" id="stok_keluar" name="stok_keluar" placeholder="Stok masuk" value="{{ $bk->stok_keluar }}">
+                <input type="number" class="form-control" id="stok_keluar" name="stok_keluar" placeholder="Stok masuk" value="{{ $bk->stok_keluar }}">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

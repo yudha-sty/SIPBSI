@@ -9,6 +9,7 @@ use App\Http\Controllers\OpsController;
 use App\Http\Controllers\KategoriPembiayaanController;
 use App\Http\Controllers\KategoriBarangController;
 use App\Http\Controllers\NasabahController;
+use App\Http\Controllers\LaporanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +44,7 @@ Route::post('store-barang-masuk', [BarangMasukController::class, 'store'])->name
 Route::post('barang-masuk-destroy/{id}', [BarangMasukController::class, 'destroy'])->name('barang-masuk.destroy');
 Route::get('barang-masuk-edit/{id}', [BarangMasukController::class, 'edit'])->name('barang-masuk.edit');
 Route::post('barang-masuk-update', [BarangMasukController::class, 'update'])->name('barang-masuk.update');
+Route::get('exportlaporan', [BarangMasukController::class, 'export'])->name('barang-masuk.export');
 
 //BARANG KELUAR
 Route::get('barang-keluar', [BarangKeluarController::class, 'index'])->name('barang-keluar');
@@ -78,6 +80,5 @@ Route::post('store-kategori-pembiayaan', [KategoriPembiayaanController::class, '
 Route::post('kategori-pembiayaan-destroy/{id}', [KategoriPembiayaanController::class, 'destroy'])->name('kategori-pembiayaan.destroy');
 Route::get('kategori-pembiayaan-edit/{id}', [KategoriPembiayaanController::class, 'edit'])->name('kategori-pembiayaan.edit');
 Route::post('update-kategori-pembiayaan/', [KategoriPembiayaanController::class, 'update'])->name('kategori-pembiayaan.update');
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/test', [LaporanController::class, 'index'])->name('test');

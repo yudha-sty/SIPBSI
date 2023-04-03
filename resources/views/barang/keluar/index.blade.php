@@ -88,7 +88,7 @@ use App\Models\BarangKeluar;
                                 <div class="form-group row">
                                     <label for="Nama Barang" class="col-sm-2 col-form-label">Stok Keluar</label>
                                         <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="inputEmail3" name="stok_keluar" placeholder="Stok Keluar">
+                                        <input type="number" class="form-control" id="inputEmail3" name="stok_keluar" placeholder="Stok Keluar">
                                         </div>
                                     </div>
                                 <div class="modal-footer">

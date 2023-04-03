@@ -7,6 +7,7 @@ use App\Models\BarangMasuk;
 use App\Models\Ops;
 use App\Models\Kategori_Barang;
 use DB;
+use PDF;
 
 class BarangMasukController extends Controller
 {
@@ -57,5 +58,11 @@ class BarangMasukController extends Controller
     public function destroy($id){
         DB::table('barangmasuk')->where('id', $id)->delete();
         return redirect()->route('barang-masuk')->with('success', 'Data Berhasil Dihapus!');
+    }
+
+    public function export(Request $request){
+        $barangmasuk = BarangMasuk::all();
+        $data = PDF::loadview('barang/masuk/laporan_pdf', compact('barangmasuk'));
+        return $data->download('laporan.pdf');
     }
 }
