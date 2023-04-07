@@ -58,7 +58,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="/nasabah">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Data Nasabah</span></a>
+                    <span>Data Dokumen Pembiayaan</span></a>
             </li>
 
             <!-- Nav Item - Tables -->

@@ -52,6 +52,7 @@ Route::post('store-barang-keluar', [BarangKeluarController::class, 'store'])->na
 Route::post('barang-keluar-destroy/{id}', [BarangKeluarController::class, 'destroy'])->name('barang-keluar.destroy');
 Route::get('barang-keluar-edit/{id}', [BarangKeluarController::class, 'edit'])->name('barang-keluar.edit');
 Route::post('barang-keluar-update', [BarangKeluarController::class, 'update'])->name('barang-keluar.update');
+Route::get('exportlaporan-keluar', [BarangKeluarController::class, 'export'])->name('barang-keluar.export');
 
 //NASABAH
 Route::get('nasabah', [NasabahController::class, 'index'])->name('nasabah');

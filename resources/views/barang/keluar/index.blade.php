@@ -20,7 +20,7 @@ use App\Models\BarangKeluar;
                                             aria-labelledby="dropdownMenuLink">
                                             <div class="dropdown-header">Action:</div>
                                             <a class="dropdown-item" data-toggle="modal" data-target="#modalbarangmasuk" href="#">Tambah Data</a>
-                                            <a class="dropdown-item" href="#">Export PDF</a>
+                                            <a class="dropdown-item" href="{{ url('exportlaporan-keluar') }}">Export PDF</a>
                                             <div class="dropdown-divider"></div>
                                             <a class="dropdown-item" href="#">Something else here</a>
                                         </div>
@@ -139,10 +139,10 @@ use App\Models\BarangKeluar;
                                                 <tr>
                                                     <th>No</th>
                                                     <th>Nama Barang</th>
-                                                    <th>Nama Pengirim</th>
-                                                    <th>Jabatan Pengirim</th>
+                                                    <th>Nama Peminjam</th>
+                                                    <th>Jabatan Peminjam</th>
                                                     <th>Kategori</th>
-                                                    <th>Stok Masuk</th>
+                                                    <th>Stok Keluar</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </tr>

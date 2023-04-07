@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Report Barang Keluar</title>
     <style>
         table {
         border-collapse: collapse;
@@ -52,10 +52,10 @@
         <i>Branch Operation & Service Manager</i><br>
         KCP Tanjung Uban <br><br>
         U.p. Yth. Adi Hadiansyah,BOSM<br><br>
-        Perihal: <b>LAPORAN BARANG MASUK</b><br><br>
+        Perihal: <b>LAPORAN BARANG KELUAR</b><br><br>
         Assalamu'alaikum, Wr. Wb.<br>
-        Menunjuk referensi tersebut diatas, sehubungan dibutuhkannya laporan barang masuk dengan ini
-        adalah laporan barang masuk
+        Menunjuk referensi tersebut diatas, sehubungan dibutuhkannya laporan barang keluar dengan ini
+        adalah laporan barang keluar
         </b>
         </p>
     </div>
@@ -72,34 +72,33 @@
             <tr>
                 <th>No</th>
                 <th>Nama Barang</th>
-                <th>Nama Pengirim</th>
-                <th>Jabatan Pengirim</th>
+                <th>Nama Peminjam</th>
+                <th>Jabatan Peminjam</th>
                 <th>Kategori</th>
-                <th>Stok Masuk</th>
-                <th>Tanggal Masuk</th>
+                <th>Stok Keluar</th>
             </tr>
         </thead>
-                @foreach ($barangmasuk as $bm)
-                <tr>
-                    <td>{{ $bm->id }}</td>
-                    <td>{{ $bm->nama_barang }}</td>
-                    <td>{{ $bm->nama_pengirim }}</td>
-                    <td>{{ $bm->jabatan_pengirim }}</td>
-                    <td>{{ $bm->kategori }}</td>
-                    <td>{{ $bm->stok_masuk }}</td>
-                    <td>{{ $bm->created_at }}</td>
-                </tr>
-                @endforeach
+        <tbody>
+            @foreach ($barangkeluar as $bk)
+            <tr>
+                <td>{{ $bk->id }}</td>
+                <td>{{ $bk->nama_barang }}</td>
+                <td>{{ $bk->nama_peminjam }}</td>
+                <td>{{ $bk->jabatan_peminjam }}</td>
+                <td>{{ $bk->kategori }}</td>
+                <td>{{ $bk->stok_keluar }}</td>
+            </tr>
+            @endforeach
+        </tbody>
         <tfoot>
             <tr>
                 <tr>
                     <th>No</th>
                     <th>Nama Barang</th>
-                    <th>Nama Pengirim</th>
-                    <th>Jabatan Pengirim</th>
+                    <th>Nama Peminjam</th>
+                    <th>Jabatan Peminjam</th>
                     <th>Kategori</th>
                     <th>Stok Masuk</th>
-                    <th>Tanggal Masuk</th>
                 </tr>
             </tr>
         </tfoot>

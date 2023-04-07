@@ -25,6 +25,12 @@
             margin: 0px;
             padding: 50px;
         }
+        .last-left{
+            padding: 50px;
+        }
+        .kiri-last{
+            padding-left: 50px;
+        }
         </style>
 </head>
 <body>
@@ -70,6 +76,7 @@
                 <th>Jabatan Pengirim</th>
                 <th>Kategori</th>
                 <th>Stok Masuk</th>
+                <th>Tanggal Masuk</th>
             </tr>
         </thead>
                 @foreach ($barangmasuk as $bm)
@@ -80,6 +87,7 @@
                     <td>{{ $bm->jabatan_pengirim }}</td>
                     <td>{{ $bm->kategori }}</td>
                     <td>{{ $bm->stok_masuk }}</td>
+                    <td>{{ $bm->created_at }}</td>
                 </tr>
                 @endforeach
         <tfoot>
@@ -91,13 +99,17 @@
                     <th>Jabatan Pengirim</th>
                     <th>Kategori</th>
                     <th>Stok Masuk</th>
+                    <th>Tanggal Masuk</th>
                 </tr>
             </tr>
         </tfoot>
     </table>
 </div>
-
-<div class="kiri">
+<div class="last-left">
+    <p>Demikan kami sampaikan, atas perhatian dan kerjasamanya kami ucapkan terima kasih.</p>
+    <p><i>Wassalamu'alaikum. Wr. Wb</i></p>
+</div>
+<div class="kiri-last">
     <b>PT. BANK SYARIAH INDONESIA</b>
     <b>KCP TANJUNG UBAN</b><br><br><br>
     <br><br><br>
